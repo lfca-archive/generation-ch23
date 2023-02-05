@@ -1,0 +1,15 @@
+#Viajeros{
+    background-color: steelblue;
+}
+#resaltadoContacto{
+    background-color: bisque;
+    color: red;
+}
+#viajeros{
+    background-color: darksalmon;
+}
+#Reservar{
+    background-color: green;
+    color: white;
+    border-radius: 3px;
+}
