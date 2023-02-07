@@ -1,0 +1,73 @@
+/* los selectores se acomodan por prioridad: id, por clase y al nombre del tag*/
+/*id, class, tag*/
+/*id tiene una característica: no puede ser reutilizado*/
+/*el selector de id se usa con el #*/
+/*el selector de class se usa con un .*/
+/*el selector por tag es el puro nombre*/
+/*B O D Y*/
+body{
+    font-family: "Open sans", arial, tahoma; 
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(208, 124, 35);
+    background-color: rgb(242,241,217);
+}
+/*H E A D E R */
+h1{
+    text-transform: uppercase;
+    text-align: center;
+}
+/*como el tag <span estaba dentro de <h1>, se pone todo junto para llamar a span.*/
+h1 span{
+    color:rgb(0, 0, 0) ;
+}
+
+/*otra foto de header???? es lo que recae en el tag de #rila*/
+#photoheader{
+    text-align: center;
+    border-bottom-color: rgb(21, 0, 255);
+    border-bottom-width: 5px;
+    border-bottom-style: double;
+}
+/*regla para foto de header*/
+#rila img{
+ background-color:#fdff99;
+ width: 120px;
+ height: 120 px;
+ border-radius: 50%;
+}
+
+.container{
+    max-width: 800px;
+    background-color:rgb(251, 252, 163);
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.menu ul {
+    text-align: center;
+    margin:auto; 
+    padding: 0%;
+}
+.menu ul li{
+        text-align: center;
+        margin: auto;
+        padding: 0%;
+        list-style-type: none;
+}
+    
+.menu ul li{
+        display: inline-block;
+        position: relative;
+}
+    
+.menu ul li a{
+        background: black;
+        color: white;
+        font-size: 10px;
+        text-decoration: none;
+        display: block;
+        padding: 3px;
+ }
