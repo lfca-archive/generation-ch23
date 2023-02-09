@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae :: Luisa Castillo </title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <!--El elemento <body> de HTML representa el contenido de un documento HTML. Solo puede haber un elemento <body> en un documento.-->
+    <div class="container"> <!--div de "division" -división . Sirve para crear secciones o agrupar contenidos.
+        Sus etiquetas son: <div> y </div> (ambas obligatorias).
+        Está definido como: Elemento en bloque.
+        Crea una caja: En bloque.
+        Puede contener: Texto, y/o cero o más elementos en bloque o en linea.
+        -->
+        <header> <!--El elemento de HTML Header (<header>) representa un grupo de ayudas introductorias o de navegación. Puede contener algunos elementos de encabezado, así como también un logo, un formulario de búsqueda, un nombre de autor y otros componentes.
+        El elemento <header> no es contenido de sección y, por lo tanto, no introduce una nueva sección en descripción.
+        -->
+            <div id="photoheader">
+                <div id="rila">
+                    <img src="../images/81MT5JxewkS._AC_SL1500_.jpg" alt="sisoy">
+                </div>
+
+            </div>
+            <h1> Hola mi nombre es Luisa y este es mi resumen</h1>
+            <nav class="menu">
+                <!--div de "division" -división . Sirve para crear secciones o agrupar contenidos. Sus etiquetas son: <div> y </div> (ambas obligatorias).Está definido como: Elemento en bloque.Crea una caja: En bloque.Puede contener: Texto, y/o cero o más elementos en bloque o en linea.-->
+                <ul> <!--ul de "unordered list" -lista no ordenada . crea una lista no ordenada. Sus etiquetas son: <ul> y </ul> (ambas obligatorias).
+                    Está definido como: Elemento para listas.
+                    Crea una caja: En bloque.
+                    Puede contener: Uno o más elementos li-->
+                    <li> <!--El elemento li del ingles item list o elemento de lista declara cada uno de los elementos de una lista.
+                        Sus etiquetas son: <li> y </li> (la de cierre es opcional).
+                        Crea una caja: en bloque.
+                        Puede contener: cero o más elementos en bloque o en en linea.-->
+                        <a href="#">Item 1</a>
+                        <!--El Elemento HTML Anchor <a> crea un enlace a otras páginas de internet, archivos o ubicaciones dentro de la misma página, direcciones de correo, o cualquier otra URL.-->
+                        <ul>
+                            <li><a href="#">sub-item1</a></li>
+                            <li><a href="#">sub-item2</a></li>
+                            <li><a href="#">sub-item3</a></li>
+                            <li><a href="#">sub-item4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Item 2</a>
+                        <ul>
+                            <li><a href="#">sub-item1</a></li>
+                            <li><a href="#">sub-item2</a></li>
+                            <li><a href="#">sub-item3</a></li>
+                            <li><a href="#">sub-item4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Item 3</a>
+                        <ul>
+                            <li><a href="#">sub-item1</a></li>
+                            <li><a href="#">sub-item2</a></li>
+                            <li><a href="#">sub-item3</a></li>
+                            <li><a href="#">sub-item4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Item 4</a>
+                        <ul>
+                            <li><a href="#">sub-item1</a></li>
+                            <li><a href="#">sub-item2</a></li>
+                            <li><a href="#">sub-item3</a></li>
+                            <li><a href="#">sub-item4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!--El elemento HTML <nav> representa una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o a otros documentos. Ejemplos comunes de secciones de navegación son menús, tablas de contenido e índices.-->
+        </header>
+        <!--Fin del header-->
+
+        <!--inicio del section-->
+        <section class="row clearfix">
+            <div class="pull-left col-60">
+                <div class="">
+                    <article>
+                        <h2>Acerca de</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, mollitia dolores? Non dolor
+                            accusamus quod fugiat molestias quia odio nemo recusandae eligendi magnam, laborum
+                            voluptatem quo soluta aliquid tempore maxime!</p>
+                    </article>
+                </div>
+            </div>
+
+            <article class="education">
+                <h2 class="col-10">Educación</h2>
+                <ul>
+                    <li>
+                        <div class="containerflex">
+                            <div class="pull-left year">2012</div>
+                            <div class="pull-left col-40 description">
+                                <h3>I was born in Monterrey,México.</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci soluta id quam
+                                    voluptate
+                                    sequi, totam maxime consectetur consequatur perspiciatis hic maiores aspernatur
+                                    illum
+                                    quasi
+                                    itaque, repellat voluptatem. Itaque, nisi autem.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="containerflex">
+                            <div class="pull left year">2000</div>
+                            <div class="pull-left col-40 description">
+                                <h3>I was born in Monterrey,México.</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci soluta id quam
+                                    voluptate sequi, totam maxime consectetur consequatur perspiciatis hic maiores
+                                    aspernatur illum
+                                    quasi itaque, repellat voluptatem. Itaque, nisi autem.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </article>
+            <!--Experiencia-->
+            <article class="experience">
+                <h2> Experiencia</h2>
+                <div class="pull-left">
+                    <div class="place col-10">Google</div>
+                    <div>2013-2014</div>
+                </div>
+                <div class="pull-left col-90">
+                    <h3>Javascript</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi quos laboriosam suscipit!
+                        Laborum, sequi velit, nulla voluptas perferendis minus provident iste distinctio, ab laboriosam
+                        facere! Officia culpa exercitationem voluptas quas?</p>
+                </div>
+                <div>
+                    <div>Google</div>
+                    <div>2011-2017</div>
+                </div>
+                <div>
+                    <h3>Front-end</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae tempora praesentium in nemo
+                        totam temporibus perferendis assumenda! Tenetur neque quo deserunt quia et facilis architecto
+                        odio
+                        repellat itaque, aut nostrum.</p>
+                </div>
+            </article>
+
+
+
+
+
+
+
+
+        </section>
+
+
+        <footer>
+            <!--El Elemento HTML Footer (<footer>) representa un pie de página para el contenido de sección más cercano o el elemento raíz de sección (p.e, su ancestro mas cercano <article>, <aside>, <nav>, <section>,<blockquote>, <body>, <details>, <fieldset>, <figure>, <td>). Un pie de página típicamente contiene información acerca de el autor de la sección, datos de derechos de autor o enlaces a documentos relacionados.-->
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+/* los selectores se acomodan por prioridad: id, por clase y al nombre del tag*/
+/*id, class, tag*/
+/*id tiene una característica: no puede ser reutilizado*/
+/*el selector de id se usa con el #*/
+/*el selector de class se usa con un .*/
+/*el selector por tag es el puro nombre*/
+/*B O D Y*/
+
+/*selector por tag*/
+body {
+    font-family: "Open sans", arial, tahoma;
+    /*La propiedad font-family define una lista de fuentes o familias de fuentes, con un orden de prioridad, para utilizar en un elemento seleccionado. A diferencia de la mayoría de las propiedades CSS, los valores se separan con comas (",") para indicar que son valores alternativos.
+    */
+    font-weight: 400;
+    /*La propiedad font-weight de CSS especifica el peso o grueso de la letra. Algunos tipos de letra sólo están disponibles en normal y bold.*/
+    font-size: 14px;
+    /*La propiedad font-size especifica la dimensión de la letra. Este tamaño puede, a su vez, alterar el aspecto de alguna otra cosa, ya que se usa para calcular la longitud de las unidades em y ex.*/
+    color: rgb(208, 124, 35);
+    /*La propiedad de CSS color selecciona el valor de color de primer plano del contenido de elemento de texto y decoraciones de texto. Tambien establece el valor currentcolor (en-US) que se puede usar como un valor indirecto en otras propiedades, y es el valor predeterminado para otras propiedades de color, como border-color.*/
+    background-color: rgb(255, 255, 255);
+    /*Background-color es un propiedad de CSS que define el color de fondo de un elemento, puede ser el valor de un color o la palabra clave transparent.*/
+}
+
+/*H E A D E R */
+/*selector por tag*/
+h1 {
+    text-transform: uppercase;
+    /*La propiedad CSS text-transform especifica el cambio entre mayúsculas y minúsculas del texto de un elemento. Puede ser usada para que un texto aparezca completamente en mayúsculas, en minúsculas, o con la primera letra de cada palabra en mayúscula.*/
+    text-align: center;
+    /*The text-align CSS property sets the horizontal alignment of the inline-level content inside a block element or table-cell box. This means it works like vertical-align but in the horizontal direction.*/
+}
+
+/*como el tag <span estaba dentro de <h1>, se pone todo junto para llamar a span.*/
+/*selector por tag*/
+/* span - abarcar. Es un contenedor en línea. Sirve para aplicar estilo al texto o agrupar elementos en línea.
+    Sus etiquetas son: <span> y </span> (ambas obligatorias).
+    Está definido como: Elemento especial, y por lo tanto en línea.
+    Crea una caja: En línea.
+    Puede contener: Texto, y/o Elementos en línea.*/
+h1 span {
+    color: rgb(0, 0, 0);
+}
+
+/*La propiedad de CSS color selecciona el valor de color de primer plano del contenido de elemento de texto y decoraciones de texto. Tambien establece el valor currentcolor (en-US) que se puede usar como un valor indirecto en otras propiedades, y es el valor predeterminado para otras propiedades de color, como border-color.*/
+
+/*otra foto de header???? es lo que recae en el tag de #rila*/
+/*selector de tipo id*/
+#photoheader {
+    text-align: center;
+    border-bottom-color: rgb(21, 0, 255);
+    border-bottom-width: 5px;
+    border-bottom-style: double;
+}
+
+/*La propiedad border-bottom-color define el color del borde inferior de un elemento, con la ayuda de un valor de color o con la palabra clave transparent.*/
+/*border-bottom-width define el ancho del borde inferior de una caja.*/
+/*border-bottom-style define el estilo de línea del borde inferior de una caja. */
+
+/*regla para foto de header*/
+#rila img {
+    background-color: #fdff99;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+/*Background-color es un propiedad de CSS que define el color de fondo de un elemento, puede ser el valor de un color o la palabra clave transparent. */
+/*La propiedad CSS width especifica la anchura del area de contenido de un elemento. De forma predeterminada, establece el ancho del área de contenido, pero si el box-sizing se establece en border-box, establece el ancho del área del borde. */
+/*La propiedad CSS height especifica la altura de un elemento. Por defecto, la propiedad define la altura del área de contenido. Sin embargo, si box-sizing está configurado como border-box, determina la altura del área de borde.*/
+/* es para hacer round las esquinas de, en este caso, una imagen*/
+
+
+/*selector de tipo clase*/
+.container {
+    max-width: 800px;
+    background-color: rgb(105, 186, 136);
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+/*The max-width CSS property sets the maximum width of an element. It prevents the used value of the width property from becoming larger than the value specified by max-width.*/
+/*Background-color es un propiedad de CSS que define el color de fondo de un elemento, puede ser el valor de un color o la palabra clave transparent. */
+
+
+/*selector de tipo clase*/
+.menu ul {
+    text-align: center;
+    margin: auto;
+    padding: 0%;
+    list-style-type: none;
+}
+
+.menu ul li {
+    display: inline-block;
+    position: relative;
+}
+
+/*selector de tipo clase*/
+.menu ul li a {
+    background: black;
+    color: white;
+    font-size: 10px;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+
+/*La propiedad position de CSS especifica cómo un elemento es posicionado en el documento. Las propiedades top, right, bottom, y left determinan la ubicación final de los elementos posicionados. 
+ La propiedad top especifica parte de la posición de un elemento posicionado*/
+/*selector de tipo clase*/
+.menu ul li ul {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    list-style-type: none;
+    display: none;
+    height: auto;
+}
+
+/*selector de tipo clase*/
+.menu ul li:hover ul {
+    display: block;
+}
+
+/*selector de tipo clase*/
+.menu ul li ul li {
+    display: block;
+    width: 60px;
+    height: 20px;
+    margin: 0;
+    text-align: left;
+    font-size: 14px;
+}
+
+/*Fin de header*/
+.background {
+    background: #e3abce;
+}
+h2 {
+    color: rgb(208, 124, 35);
+    text-transform: uppercase;
+}
+
+h2::before {
+    content: "//";
+}
+
+/*clearfix resuelve un error persistente que ocurre cuando dos elementos flotantes se apilan uno al lado del otro*/
+.clearfix:before {
+    display: table;
+    line-height: 1;
+    content: " ";
+}
+
+.pull-left {
+    float: left;
+    /*mandar objetos a algún lado, en este caso, a la izq*/
+}
+
+.row {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.col-60{
+    width: 60%;
+}
+
+.col-10{
+    width: 10%;
+}
+.col-20{
+    width: 20%;
+}
+
+.col-40{
+    width: 40%;
+}
+
+.col-70{
+    width:70%;
+}
+
+.col-80{
+    width: 80;
+}
+
+.col-90{
+    width: 90%;
+}
+
+
+
+.containerflex {
+    display: flex;
+}
+
+.education ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.education .year {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.education .description {
+    background: #EEEEEE;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.education .description h3, .education .description p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.education .description p::after {
+    content: "";
+    position: absolute;
+    border: 8px solid transparent;
+    border-right: 8px solid #EEEEEE;
+    top: 5px;
+    left: -16px;
+}
+
+.experience .jobs .where {
+    font-size: 1.2em;
+    font-weight: bold;
+
+}
+
+.year {
+    font-size: 0.8em;
+}
+
+.profesion {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 2em;
+    font-size: 0.9em;
+    text-align: justify;
+}
+
+.description {
+    margin-top: 0;
+    margin-left: 2em;
+    text-align: justify;
+
+}
+
+.skills {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skills-item {
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 2px 0 2px 5px;
+    margin-top: 5px;
+    background: rgb(208, 124, 35);
+
+}
+
+.skills-item[data-percent="10"] {width: 10%}
+.skills-item[data-percent="20"] {width: 20%}
+.skills-item[data-percent="30"] {width: 30%}
+.skills-item[data-percent="40"] {width: 40%}
+.skills-item[data-percent="50"] {width: 50%}
+.skills-item[data-percent="60"] {width: 60%}
+.skills-item[data-percent="70"] {width: 70%}
+.skills-item[data-percent="80"] {width: 80%}
+.skills-item[data-percent="90"] {width: 90%}
+
+.html {
+    color: #DDDDDD;
+    margin: 3px;
+    list-style-type: none;
+    text-align: right;
+    width: 90%;
+    background-color: #04AA6D;
+}
+
+.css {
+    color: #DDDDDD;
+    margin: 3px;
+    list-style-type: none;
+    text-align: right;
+    width: 80%;
+    background-color: #2196F3;
+}
+
+.js {
+    color: #DDDDDD;
+    margin: 3px;
+    list-style-type: none;
+    text-align: right;
+    width: 65%;
+    background-color: #f44336;
+}
+
+.python {
+    color: #DDDDDD;
+    margin: 3px;
+    list-style-type: none;
+    text-align: right;
+    width: 60%;
+    background-color: #808080;
+}
+
+.grey-star-icon {
+    background: url(../images/star-grey.png) no-repeat;
+    width: 110px;
+    height: 14px;
+    float: right;
+}
+
+.red-star-icon {
+    background: url(../images/star-red.png) no-repeat;
+    width: 110px;
+    height: 14px;
+    float: left;
+}
+
+.object-star {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 5px;
+
+}
+
+.hobbies {
+    background: rgb(0, 0, 0);
+    color: white;
+    padding: 4px;
+    font-size: 1em;
+}
