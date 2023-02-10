@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo js para la web (Intro web 7)</title>
+    <script>
+        function saludar(){
+            console.log("Hola mundo js desde vscode(ㅇㅅㅇ)")
+        }
+        function sumar( v1, v2 = 10) {
+            console.log("Esto es una suma: ");
+            return (v1 +v2);
+        }
+    </script>
+<script>
+    function llamaNombre (nombre){
+        alert ("Hola, " + nombre);
+    }
+</script>
+</head>
+<body>
+    <h1>javascript</h1>
+    <!--declarar js dentro de html, permite aislar el código de js en html y lo va a interpretar-->
+    <script>
+        saludar();
+        console.log ("El resultado es: " + sumar(3, 20));
+    </script>
+    <script>
+        let nombre = prompt("¿Cuál es tu nombre? : ");
+        llamaNombre(nombre);
+    </script>
+</body>
+</html>
