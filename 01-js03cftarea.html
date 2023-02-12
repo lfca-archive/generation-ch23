@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--estilos agregados por medio de la etiqueta style-->
+<body style="background-color:#b37eb5;">
+    <h2 style="text-align: center;"> Ejercicio Js03: Control Flow</h2>
+    <hr style="border-color:	#5f2568">
+    <label>Indica el dia laboral: </label>
+    <!--listas de opciones, obtenida en bootstrap-->
+    <select name="DiaL" id="DiaL">
+        <option value="1">Lunes</option>
+        <option value="2">Martes</option>
+        <option value="3">Miercoles</option>
+        <option value="4">Jueves</option>
+        <option value="5">Viernes</option>
+        <option value="6">Sabado</option>
+        <option value="7">Domingo</option>
+    </select><p>
+    <label>Indica la hora laboral</label>
+    <select name="horaL" id="horaL">
+        <option value="0">00:00</option>
+        <option value="1">01:00</option>
+        <option value="2">02:00</option>
+        <option value="3">03:00</option>
+        <option value="4">04:00</option>
+        <option value="5">05:00</option>
+        <option value="6">06:00</option>
+        <option value="7">07:00</option>
+        <option value="8">08:00</option>
+        <option value="9">09:00</option>
+        <option value="10">10:00</option>
+        <option value="11">11:00</option>
+        <option value="12">12:00</option>
+        <option value="13">13:00</option>
+        <option value="14">14:00</option>
+        <option value="15">15:00</option>
+        <option value="16">16:00</option>
+        <option value="17">17:00</option>
+        <option value="18">18:00</option>
+        <option value="19">19:00</option>
+        <option value="20">20:00</option>
+        <option value="21">21:00</option>
+        <option value="22">22:00</option>
+        <option value="23">23:00</option>
+    </select>
+    <!--leí que poner imput y button era un equivalente, quise intentarlo y funcionó.-->
+    <input type="button" value="Aceptar" onclick="validar()"><p></p>
+    <label>Indique un dia del 1 al 365: </label>
+    <input type="number" id="DS" name="DS"><p></p>
+    <label>Indique en que dia fue el primer dia del año: </label>
+    <select name="FD" id="FD">
+        <option value="1">Lunes</option>
+        <option value="2">Martes</option>
+        <option value="3">Miercoles</option>
+        <option value="4">Jueves</option>
+        <option value="5">Viernes</option>
+        <option value="6">Sabado</option>
+        <option value="0">Domingo</option>
+    </select>
+    <input type="button" value="Confirmar" onclick="Validar2()"><p></p>
+    <!--funciones de javascript, igual lo agregué aquí para experimentar, aunque sé que se deben de tener documentos diferentes.-->
+    <script>
+        
+        function validar(){
+            var numeroDia= document.getElementById("DiaL").value;
+            var numeroHora= document.getElementById("horaL").value;
+            var save= businessHours(numeroDia, numeroHora);
+            alert(save);
+            }
+
+        function businessHours(numeroDia, numeroHora){
+            if(numeroDia<6 && (numeroHora>9 && numeroHora<18)){
+                alert("ES HORARIO COMERCIAL");
+                return true;
+            }else{
+                alert("NO ES HORARIO COMERCIAL");
+                return false;
+            }
+        }
+
+        function Validar2(){
+            var DS=document.getElementById("DS").value-1;
+            var FD= document.getElementById("FD").value;
+            getNumeroDia(FD, DS);
+        }
+
+        function getNumeroDia(janFirstDayNumber, yearDayNumber){
+            var x= janFirstDayNumber*1; //dia de la semana en que empieza el año
+            var FD= yearDayNumber; //dia a buscar
+            var DS= FD%7; //el residuo indica el dia de la semana dependiendo del dia inicial del año
+            switch(x){
+                case 0:
+                    switch(DS){
+                        case 0: alert("EL DIA FUE DOMINGO");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraNL();
+                                }
+                        break
+                        case 1: alert("EL DIA FUE LUNES");
+                                if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 2: alert("EL DIA FUE MARTES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 3: alert("EL DIA FUE MIERCOLES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 4: alert("EL DIA FUE JUEVES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 5: alert("EL DIA FUE VIERNES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 6: alert("EL DIA FUE SABADO");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraNL();
+                                }
+                        break
+                        break
+                    }
+                break;
+                case 1:
+                    switch(DS){
+                        case 0: alert("EL DIA FUE LUNES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 1: alert("EL DIA FUE MARTES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 2: alert("EL DIA FUE MIERCOLES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 3: alert("EL DIA FUE JUEVES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 4: alert("EL DIA FUE VIERNES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 5: alert("EL DIA FUE SABADO");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraNL();
+                                }
+                        break
+                        case 6: alert("EL DIA FUE DOMINGO");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraNL();
+                                }
+                        break
+                    }
+                break;
+                case 2:
+                    switch(DS){
+                        case 0: alert("EL DIA FUE MARTES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 1: alert("EL DIA FUE MIERCOLES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 2: alert("EL DIA FUE JUEVES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 3: alert("EL DIA FUE VIERNES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 4: alert("EL DIA FUE SABADO");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraNL();
+                                }
+                        break
+                        case 5: alert("EL DIA FUE DOMINGO");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraNL();
+                                }
+                        break
+                        case 6: alert("EL DIA FUE LUNES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                    }
+                break;
+                case 3:
+                    switch(DS){
+                        case 0: alert("EL DIA FUE MIERCOLES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 1: alert("EL DIA FUE JUEVES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 2: alert("EL DIA FUE VIERNES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 3: alert("EL DIA FUE SABADO");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraNL();
+                                }
+                        break
+                        case 4: alert("EL DIA FUE DOMINGO");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraNL();
+                                }
+                        break
+                        case 5: alert("EL DIA FUE LUNES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 6: alert("EL DIA FUE MARTES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                    }
+                break;
+                case 4:
+                    switch(DS){
+                        case 0: alert("EL DIA FUE JUEVES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 1: alert("EL DIA FUE VIERNES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 2: alert("EL DIA FUE SABADO");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraNL();
+                                }
+                        break
+                        case 3: alert("EL DIA FUE DOMINGO");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraNL();
+                                }
+                        break
+                        case 4: alert("EL DIA FUE LUNES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 5: alert("EL DIA FUE MARTES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 6: alert("EL DIA FUE MIERCOLES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                    }
+                break;
+                case 5:
+                    switch(DS){
+                        case 0: alert("EL DIA FUE VIERNES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 1: alert("EL DIA FUE SABADO");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraNL();
+                                }
+                        break
+                        case 2: alert("EL DIA FUE DOMINGO");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraNL();
+                                }
+                        break
+                        case 3: alert("EL DIA FUE LUNES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 4: alert("EL DIA FUE MARTES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 5: alert("EL DIA FUE MIERCOLES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 6: alert("EL DIA FUE JUEVES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                    }
+                break;
+                case 6:
+                    switch(DS){
+                        case 0: alert("EL DIA FUE SABADO");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraNL();
+                                }
+                        break
+                        case 1: alert("EL DIA FUE DOMINGO");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraNL();
+                                }
+                        break
+                        case 2: alert("EL DIA FUE LUNES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 3: alert("EL DIA FUE MARTES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 4: alert("EL DIA FUE MIERCOLES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 5: alert("EL DIA FUE JUEVES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                        case 6: alert("EL DIA FUE VIERNES");
+                        if(confirm("Desea indicar una hora?")){
+                                    IndicarHoraL();
+                                }
+                        break
+                    }
+                break;
+            }
+        }
+
+
+        function IndicarHoraL(){
+            var numeroHora= prompt("Indique una hora en formato 24 (0:23)");
+            if(numeroHora>9 && numeroHora<18){
+                alert("Es Horario y Dia Laboral");
+            }else{
+                alert("Es Dia laboral pero no Horario laboral");
+            }
+        }
+
+        function IndicarHoraNL(){
+            var numeroHora= prompt("Indique una hora en formato 24 (0:23)");
+            if(numeroHora>9 && numeroHora<18){
+                alert("Es Horario pero NO Dia Laboral");
+            }else{
+                alert("NO es Dia laboral ni Horario laboral");
+            }
+        }
+
+
+    </script>  
+    
+</body>
+</html>
+
