@@ -1,0 +1,10 @@
+//Esto es un comentario en linea 
+/* 
+ * Esto es un comentario a bloque
+ * */
+
+class HolaJava {
+	void saludo() {
+		System.out.println("Hola desde el IDE STS..:P");
+	}
+}
