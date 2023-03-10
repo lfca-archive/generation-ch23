@@ -1,0 +1,115 @@
+//java if else//
+
+
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        if (N % 2 != 0 || (N >= 6 && N <= 20)) {
+            System.out.println("Weird");
+        } else {
+            System.out.println("Not Weird");
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+
+//Ejercicio 2//
+
+import java.util.*;
+import java.io.*;
+import java.lang.Math.*;
+
+class Solution{
+    public static void main(String []argh){
+        Scanner in = new Scanner(System.in);
+        int t=in.nextInt();
+        for(int i=0;i<t;i++){
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int n = in.nextInt();
+            int calc = a;
+            for(int j=0;j<n;j++)
+            {
+                calc+=(Math.pow(2,j)*b);
+                System.out.print(calc+" ");
+            }
+            System.out.println();
+        }
+        in.close();
+    }
+}
+
+
+//Ejericio 3//
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+class Result {
+
+   public static void plusMinus(List<Integer> array) {
+    
+        double positive = 0, negative = 0, zero = 0;
+        int arraySize = array.size();
+        
+        for (int i = 0; i < array.size(); i++) {
+            
+            if (array.get(i) > 0) {
+                positive++;
+            } else if (array.get(i) < 0) {
+                negative++;
+            } else {
+                zero++;
+            }
+        }
+        
+        System.out.println(positive / arraySize);
+        System.out.println(negative / arraySize);
+        System.out.println(zero / arraySize);
+
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        int n = Integer.parseInt(bufferedReader.readLine().trim());
+
+        String[] arrTemp = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+
+        List<Integer> arr = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            int arrItem = Integer.parseInt(arrTemp[i]);
+            arr.add(arrItem);
+        }
+
+        Result.plusMinus(arr);
+
+        bufferedReader.close();
+    }
+}
